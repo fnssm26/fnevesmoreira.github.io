@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dr. Your Name — Research</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400;500&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ░ NAV ░ -->
+  <nav class="nav">
+    <a href="index.html" class="nav-logo">YourName<span class="accent">.</span></a>
+    <ul class="nav-links">
+      <li><a href="#research">Research</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="mailto:you@university.edu" class="nav-cta">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- ░ HERO ░ -->
+  <header class="hero">
+    <div class="hero-bg-grid"></div>
+    <div class="hero-content">
+      <p class="hero-label">Researcher · Engineer · Scientist</p>
+      <h1 class="hero-title">
+        Exploring the<br/>
+        <em>edges of</em><br/>
+        <span class="hero-title-big">Science.</span>
+      </h1>
+      <p class="hero-desc">
+        I work on [your research area]. My papers span simulation,
+        machine learning, and interactive systems — each with
+        open code, data, and explainers.
+      </p>
+      <a href="#research" class="btn-primary">View Research ↓</a>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-card-float">
+        <div class="hcf-dot"></div>
+        <div class="hcf-line"></div>
+        <div class="hcf-line short"></div>
+        <div class="hcf-tag">2024 · Journal of X</div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ░ RESEARCH ░ -->
+  <section id="research" class="research-section">
+    <div class="section-header">
+      <span class="section-label">Publications</span>
+      <h2 class="section-title">Research Papers</h2>
+    </div>
+
+    <div class="papers-grid">
+
+      <!-- ─── PAPER CARD ─── -->
+      <article class="paper-card" data-tags="rl simulation">
+        <div class="paper-card-header">
+          <span class="paper-year">2024</span>
+          <span class="paper-venue">Nature · Machine Intelligence</span>
+        </div>
+        <h3 class="paper-title">Your First Paper Title Goes Here</h3>
+        <p class="paper-abstract">
+          A short, plain-language summary of what the paper is about and why it matters.
+          Two or three sentences is ideal for this card.
+        </p>
+        <div class="paper-tags">
+          <span class="tag">Reinforcement Learning</span>
+          <span class="tag">Simulation</span>
+        </div>
+        <div class="paper-media-icons">
+          <span class="media-icon" title="PDF available">📄</span>
+          <span class="media-icon" title="Infographic available">🖼</span>
+          <span class="media-icon" title="Video available">🎬</span>
+          <span class="media-icon" title="Interactive demo available">⚙️</span>
+        </div>
+        <a href="papers/paper-1/index.html" class="paper-link">Explore paper →</a>
+      </article>
+
+      <!-- ─── PAPER CARD 2 ─── -->
+      <article class="paper-card" data-tags="control gym">
+        <div class="paper-card-header">
+          <span class="paper-year">2023</span>
+          <span class="paper-venue">ICML · Workshop</span>
+        </div>
+        <h3 class="paper-title">Your Second Paper Title Goes Here</h3>
+        <p class="paper-abstract">
+          A short, plain-language summary of what the paper is about and why it matters.
+          Two or three sentences is ideal for this card.
+        </p>
+        <div class="paper-tags">
+          <span class="tag">Control Theory</span>
+          <span class="tag">OpenAI Gym</span>
+        </div>
+        <div class="paper-media-icons">
+          <span class="media-icon" title="PDF available">📄</span>
+          <span class="media-icon" title="Slides available">📊</span>
+          <span class="media-icon" title="Interactive demo available">⚙️</span>
+        </div>
+        <a href="papers/paper-2/index.html" class="paper-link">Explore paper →</a>
+      </article>
+
+      <!-- ─── PAPER CARD 3 ─── -->
+      <article class="paper-card" data-tags="deep-learning">
+        <div class="paper-card-header">
+          <span class="paper-year">2022</span>
+          <span class="paper-venue">NeurIPS</span>
+        </div>
+        <h3 class="paper-title">Your Third Paper Title Goes Here</h3>
+        <p class="paper-abstract">
+          A short, plain-language summary of what the paper is about and why it matters.
+          Two or three sentences is ideal for this card.
+        </p>
+        <div class="paper-tags">
+          <span class="tag">Deep Learning</span>
+          <span class="tag">Optimization</span>
+        </div>
+        <div class="paper-media-icons">
+          <span class="media-icon" title="PDF available">📄</span>
+          <span class="media-icon" title="Video available">🎬</span>
+        </div>
+        <a href="papers/paper-3/index.html" class="paper-link">Explore paper →</a>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ░ ABOUT ░ -->
+  <section id="about" class="about-section">
+    <div class="about-inner">
+      <div class="about-text">
+        <span class="section-label">About</span>
+        <h2 class="section-title">Who I am</h2>
+        <p>
+          I'm a researcher at <strong>University / Lab Name</strong> working on [research area].
+          My work sits at the intersection of [field A] and [field B], with a focus on
+          making scientific results reproducible, interactive, and accessible.
+        </p>
+        <p>
+          Previously at [Institution]. PhD from [University].
+        </p>
+        <div class="about-links">
+          <a href="https://scholar.google.com" target="_blank" class="about-link">Google Scholar ↗</a>
+          <a href="https://github.com/yourusername" target="_blank" class="about-link">GitHub ↗</a>
+          <a href="https://linkedin.com/in/yourprofile" target="_blank" class="about-link">LinkedIn ↗</a>
+          <a href="assets/cv.pdf" class="about-link">Download CV ↗</a>
+        </div>
+      </div>
+      <div class="about-photo-placeholder">
+        <!-- Replace with: <img src="assets/photo.jpg" alt="Your Name" /> -->
+        <div class="photo-placeholder-inner">
+          <span>Your<br/>Photo</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ░ FOOTER ░ -->
+  <footer class="footer">
+    <p>© 2024 Your Name · Built with GitHub Pages · <a href="mailto:you@university.edu">you@university.edu</a></p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

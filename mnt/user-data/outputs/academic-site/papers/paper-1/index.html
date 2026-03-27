@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Paper Title — Your Name</title>
+  <link rel="stylesheet" href="../../style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400;500&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ░ NAV ░ -->
+  <nav class="paper-detail-nav">
+    <a href="../../index.html" class="back-link">← All Papers</a>
+    <span style="font-family:var(--font-mono);font-size:0.78rem;color:var(--text3);">YourName<span style="color:var(--accent)">.</span></span>
+    <div style="display:flex;gap:0.7rem;">
+      <a href="paper.pdf" target="_blank" class="about-link" style="font-size:0.78rem;padding:0.35rem 0.9rem;">Download PDF ↗</a>
+    </div>
+  </nav>
+
+  <!-- ░ PAPER HERO ░ -->
+  <div class="paper-detail-hero">
+    <div class="paper-detail-meta">
+      <span class="paper-year">2024</span>
+      <span style="color:var(--text3);font-family:var(--font-mono);font-size:0.75rem;">·</span>
+      <span class="paper-venue">Nature · Machine Intelligence</span>
+    </div>
+    <h1 class="paper-detail-title">Your First Paper Title Goes Here: A Comprehensive Study</h1>
+    <p class="paper-detail-authors">
+      <strong style="color:var(--text)">Your Name</strong>,
+      Co-Author One, Co-Author Two, Senior Author
+    </p>
+    <p class="paper-detail-desc">
+      A plain-language summary of the paper for a broad audience.
+      Explain the key problem you solved, your approach, and why the results matter.
+      Keep it accessible — this is what visitors without a PhD will read first.
+      Two to four sentences works well here.
+    </p>
+    <div class="paper-tags" style="margin-top:1.5rem;">
+      <span class="tag">Reinforcement Learning</span>
+      <span class="tag">Simulation</span>
+      <span class="tag">Control</span>
+    </div>
+  </div>
+
+  <!-- ░ MEDIA TABS ░ -->
+  <div class="media-tabs-section">
+
+    <div class="tabs" role="tablist">
+      <button class="tab-btn active" data-tab="pdf"          role="tab">📄 Paper (PDF)</button>
+      <button class="tab-btn"        data-tab="infographic"  role="tab">🖼 Infographics</button>
+      <button class="tab-btn"        data-tab="slides"       role="tab">📊 Slides</button>
+      <button class="tab-btn"        data-tab="video"        role="tab">🎬 Video</button>
+      <button class="tab-btn"        data-tab="demo"         role="tab">⚙️ Demo / Sim</button>
+    </div>
+
+    <!-- ─ TAB: PDF ─ -->
+    <div class="tab-panel active" id="tab-pdf">
+      <div class="pdf-viewer-wrap">
+        <!--
+          HOW TO USE:
+          1. Place your PDF at papers/paper-1/paper.pdf
+          2. Replace "paper.pdf" in the src below with the filename
+
+          The PDF renders in-browser on most desktop browsers.
+          On mobile it falls back to a download link automatically.
+        -->
+        <iframe
+          src="paper.pdf"
+          title="Paper PDF"
+          loading="lazy">
+          <p style="padding:2rem;color:#333;">
+            Your browser doesn't support embedded PDFs.
+            <a href="paper.pdf">Download the PDF</a> instead.
+          </p>
+        </iframe>
+      </div>
+      <p style="margin-top:1rem;font-size:0.8rem;color:var(--text3);font-family:var(--font-mono);">
+        Can't see it? <a href="paper.pdf" style="color:var(--accent);">Open PDF in new tab ↗</a>
+      </p>
+    </div>
+
+    <!-- ─ TAB: INFOGRAPHICS ─ -->
+    <div class="tab-panel" id="tab-infographic">
+      <!--
+        HOW TO USE:
+        1. Place PNG/JPG infographic files in this folder (papers/paper-1/)
+        2. Duplicate the .infographic-item block for each image
+        3. Update src and caption text
+      -->
+      <div class="infographic-grid">
+
+        <div class="infographic-item" onclick="openLightbox(this)">
+          <img src="infographic-1.png" alt="Research overview infographic" loading="lazy" />
+          <div class="infographic-caption">Fig 1 — Overview of the proposed method</div>
+        </div>
+
+        <div class="infographic-item" onclick="openLightbox(this)">
+          <img src="infographic-2.png" alt="Results infographic" loading="lazy" />
+          <div class="infographic-caption">Fig 2 — Key results compared to baselines</div>
+        </div>
+
+        <div class="infographic-item" onclick="openLightbox(this)">
+          <img src="infographic-3.png" alt="System architecture" loading="lazy" />
+          <div class="infographic-caption">Fig 3 — System architecture diagram</div>
+        </div>
+
+      </div>
+      <p style="margin-top:1.5rem;font-size:0.82rem;color:var(--text3);">
+        Click any image to enlarge.
+      </p>
+    </div>
+
+    <!-- ─ TAB: SLIDES ─ -->
+    <div class="tab-panel" id="tab-slides">
+      <!--
+        HOW TO USE — 3 options:
+
+        OPTION A — Google Slides (recommended, easy):
+          1. Open your presentation in Google Slides
+          2. File → Share → Publish to web
+          3. Copy the embed link and replace the src below
+
+        OPTION B — PowerPoint uploaded to OneDrive:
+          1. Upload .pptx to OneDrive
+          2. Click Share → Embed → Copy the iframe code
+          3. Paste the src URL below
+
+        OPTION C — Convert .pptx to PDF and embed like the PDF tab above.
+      -->
+      <div class="slides-embed-wrap">
+        <iframe
+          src="https://docs.google.com/presentation/d/YOUR_PRESENTATION_ID/embed?start=false&loop=false&delayms=3000"
+          allowfullscreen
+          loading="lazy"
+          title="Presentation slides">
+        </iframe>
+      </div>
+      <p style="margin-top:1rem;font-size:0.8rem;color:var(--text3);font-family:var(--font-mono);">
+        Or <a href="slides.pptx" style="color:var(--accent);" download>download .pptx ↓</a>
+      </p>
+    </div>
+
+    <!-- ─ TAB: VIDEO ─ -->
+    <div class="tab-panel" id="tab-video">
+      <!--
+        HOW TO USE:
+
+        YouTube or NotebookLM (exported to YouTube):
+          Replace VIDEO_ID with the YouTube video ID from the URL
+          e.g. for https://www.youtube.com/watch?v=dQw4w9WgXcQ
+          the VIDEO_ID is dQw4w9WgXcQ
+
+        NotebookLM audio overview:
+          If you embed as a YouTube video, use same method above.
+          If it's a direct MP3, replace the <iframe> with an <audio> tag.
+      -->
+      <div class="video-wrap">
+        <iframe
+          src="https://www.youtube.com/embed/VIDEO_ID_HERE"
+          title="Paper video overview"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          loading="lazy">
+        </iframe>
+      </div>
+      <p class="video-desc">
+        A 5-minute overview of the paper's key contributions,
+        generated with NotebookLM / recorded at [Conference Name].
+        The video covers the motivation, methodology, and main results.
+      </p>
+    </div>
+
+    <!-- ─ TAB: DEMO / SIM ─ -->
+    <div class="tab-panel" id="tab-demo">
+      <!--
+        HOW TO USE:
+
+        OPTION A — Hugging Face Spaces (RECOMMENDED for OpenAI Gym):
+          1. Create a free account at huggingface.co
+          2. Create a new Space (Gradio or Streamlit app)
+          3. Upload your Gym environment + visualization code
+          4. Replace the src below with your Space URL + "?embed=true"
+          Example: src="https://huggingface.co/spaces/yourname/yourspace?embed=true"
+
+        OPTION B — Self-contained HTML sim:
+          1. Export your sim as a standalone HTML file
+          2. Place it in this folder as "sim.html"
+          3. Replace the iframe src with "sim.html"
+
+        OPTION C — Binder / Google Colab:
+          Link to a Binder or Colab notebook instead of embedding.
+      -->
+      <div class="demo-wrap">
+
+        <!-- UNCOMMENT and fill in once you have a Hugging Face Space:
+        <iframe
+          src="https://huggingface.co/spaces/YOUR_USERNAME/YOUR_SPACE?embed=true"
+          title="Interactive simulation"
+          loading="lazy">
+        </iframe>
+        -->
+
+        <!-- Placeholder shown until you connect the sim: -->
+        <div class="demo-placeholder">
+          <div class="big-icon">⚙️</div>
+          <p>
+            Interactive simulation coming soon.<br/>
+            The OpenAI Gym environment associated with this paper will be
+            hosted on <a href="https://huggingface.co/spaces" target="_blank">Hugging Face Spaces</a>
+            and embedded here.
+          </p>
+          <a href="https://github.com/yourusername/repo" target="_blank" class="about-link"
+             style="font-size:0.8rem;padding:0.4rem 1rem;margin-top:0.5rem;">
+            View code on GitHub ↗
+          </a>
+        </div>
+
+      </div>
+      <p style="margin-top:1rem;font-size:0.82rem;color:var(--text3);">
+        Open in full screen:
+        <a href="https://huggingface.co/spaces/YOUR_USERNAME/YOUR_SPACE"
+           target="_blank" style="color:var(--accent);">
+          Hugging Face Space ↗
+        </a>
+      </p>
+    </div>
+
+  </div><!-- /media-tabs-section -->
+
+  <!-- ░ LIGHTBOX ░ -->
+  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <button class="lightbox-close" onclick="closeLightbox()">✕ Close</button>
+    <img class="lightbox-img" id="lightbox-img" src="" alt="" />
+  </div>
+
+  <!-- ░ FOOTER ░ -->
+  <footer class="footer">
+    <p>© 2024 Your Name · <a href="../../index.html">← Back to all papers</a></p>
+  </footer>
+
+  <script>
+    // ── Tab switching ──
+    const tabBtns   = document.querySelectorAll('.tab-btn');
+    const tabPanels = document.querySelectorAll('.tab-panel');
+
+    tabBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const target = btn.dataset.tab;
+        tabBtns.forEach(b => b.classList.remove('active'));
+        tabPanels.forEach(p => p.classList.remove('active'));
+        btn.classList.add('active');
+        document.getElementById('tab-' + target).classList.add('active');
+      });
+    });
+
+    // ── Lightbox ──
+    function openLightbox(el) {
+      const img = el.querySelector('img');
+      document.getElementById('lightbox-img').src = img.src;
+      document.getElementById('lightbox-img').alt = img.alt;
+      document.getElementById('lightbox').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+  </script>
+</body>
+</html>
